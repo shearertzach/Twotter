@@ -6,23 +6,26 @@ from twotter_app import bcrypt
 
 class SignUpForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=3, max=15)])
+    display_name = StringField('Display Name', validators=[DataRequired(), Length(min=3, max=15)])
     password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Sign Up')
+    submit = SubmitField('Create')
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user:
-            raise ValidatioError('That username is taken. Please choose a different one.')
+            raise ValidationError('That username is taken. Please choose a different one.')
+
+
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=3, max=15)])
     password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Sign Up')
+    submit = SubmitField('Log In')
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if not user:
-            raise ValidatioError('No user with that username. Please try again.')
+            raise ValidationError('No user with that username. Please try again.')
 
     def validate_password(self, password):
         user = User.query.filter_by(username=self.username.data).first()

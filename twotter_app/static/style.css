@@ -1,0 +1,222 @@
+html, body {
+    background-color: rgb(26, 26, 26);
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+    color: white;
+}
+
+.navbar {
+    height: 50px;
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    margin: 0 10px;
+    color: rgb(148, 148, 148);
+    text-decoration: none;
+
+    transition: all 0.25s;
+}
+
+.navbar a:hover {
+    color: rgb(233, 255, 133);
+}
+
+
+
+.authForm {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.authForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.authForm form .authInput {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.authForm form .authInput label {
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.authForm form .authInput input {
+    height: 55px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0 10px;
+    outline: none;
+    font-weight: lighter;
+    transition: all 0.25s;
+
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.authForm form .authInput input:focus {
+    border: 3px solid rgb(233, 255, 133);
+}
+
+.authForm form input[type='submit'] {
+    width: 150px;
+    margin-top: 25px;
+    margin-left: auto;
+    height: 40px;
+
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(233, 255, 133);
+    color: black;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.authForm form input[type='submit']:hover {
+    width: 175px;
+}
+
+
+
+
+
+
+
+.mainHeader {
+    max-width: 500px;
+    padding-left: 10px;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.allTwotsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.twotContainer {
+    margin: 10px;
+    max-width: 630px;
+    width: 90%;
+    padding: 13px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(31, 31, 31);
+    box-shadow: 3px 10px 10px 5px #00000023;
+    border-radius: 10px;
+}
+
+.twotUsername {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.twotBody {
+    margin: 0;
+    margin-left: 13px;
+}
+
+
+.twotButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.twotButtonContainer a {
+    margin: 0;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(148, 148, 148);
+    transition: all 0.25s;
+}
+
+.twotButtonContainer a:hover {
+    color: rgb(233, 255, 133);
+}
+
+
+.twotViewContainer {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid rgb(58, 58, 58);
+    box-shadow: 3px 10px 10px 5px #00000023;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.twotViewContainer p {
+    margin-left: 15px;
+}
+
+.twotViewContainer h2 {
+    margin-top: 0px;
+}
+
+.replyContainer {
+    margin-bottom: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.397);
+}
+
+.replyContainer p {
+    margin-left: 15px;
+}
+
+.replyForm {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0 ;
+}
+
+.replyForm input[type='text'] {
+    flex-basis: 65%;
+
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+    font-weight: lighter;
+    transition: all 0.25s;
+
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.replyForm input[type='submit'] {
+    flex-basis: 20%;
+
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid rgb(233, 255, 133);;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.replyForm input[type='submit']:hover {
+    background-color: rgb(233, 255, 133);
+    color: black;
+}

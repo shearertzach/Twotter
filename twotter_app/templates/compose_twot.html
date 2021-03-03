@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Compose Twot</h1>
+
+<form action='/compose_twot' method='POST'>
+    {{ form.csrf_token }}
+
+        {{ form.body.label }}
+        {{ form.body }}
+
+        {% for error in form.body.errors %}
+        <p>{{error}}</p>
+        {% endfor %}
+
+        {{ form.submit }}
+</form>
+
+
+{% endblock %}

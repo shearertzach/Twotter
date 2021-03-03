@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="twotViewContainer">
+    <h2>{{ twot.user.display_name }} <span style="color: rgb(119, 119, 119); font-size: 18px;">@{{ twot.user.username }}</span></h2>
+
+    <p style="font-size: 19px;">{{ twot.body }}</p>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.281);">
+    
+
+    <form action="/reply/{{ twot.id }}" method="POST" class="replyForm">
+        {{ form.csrf_token}}
+        {{ form.body }}
+
+        {{ form.submit }}
+
+        {% if form.errors %}
+            {{ form.errors}}
+        {% endif %}
+    </form>
+
+    
+    <h2 style="text-align: center;">Replies</h2>
+
+    {% for reply in replies %}
+        <div class="replyContainer">
+            <h3>{{ reply.user.display_name }} <span style="color: rgb(119, 119, 119); font-size: 16px;">@{{ reply.user.username }}</h3>
+            <p>{{ reply.body }}</p>
+            
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}
