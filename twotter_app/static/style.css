@@ -123,6 +123,48 @@ html, body {
     border-radius: 10px;
 }
 
+.composeTwot {
+    text-align: center;
+}
+
+.composeTwot input[type='text'] {
+    width: 90%;
+    max-width: 600px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+    font-weight: lighter;
+    transition: all 0.25s;
+
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.composeTwot input[type='submit'] {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid rgb(233, 255, 133);
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.composeTwot input[type='text']:focus {
+    border: 3px solid rgb(233, 255, 133);
+}
+
+.composeTwot input[type='submit']:hover {
+    background-color: rgb(233, 255, 133);
+    color: black;
+}
+
 .twotUsername {
     margin: 0;
     margin-bottom: 10px;
@@ -132,7 +174,6 @@ html, body {
     margin: 0;
     margin-left: 13px;
 }
-
 
 .twotButtonContainer {
     display: flex;
